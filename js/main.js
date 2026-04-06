@@ -161,12 +161,32 @@ function initContactForm() {
     }
 
     if (valid) {
-      // Show success (replace with EmailJS / backend call for real use)
-      document.getElementById('form-success').classList.remove('hidden');
-      form.reset();
-      setTimeout(() => {
-        document.getElementById('form-success').classList.add('hidden');
-      }, 5000);
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.innerHTML = '<span class="animate-pulse">Sending...</span>';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(res => {
+        if (res.ok) {
+          document.getElementById('form-success').classList.remove('hidden');
+          form.reset();
+          setTimeout(() => {
+            document.getElementById('form-success').classList.add('hidden');
+          }, 5000);
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      })
+      .catch(() => alert('Something went wrong. Please try again.'))
+      .finally(() => {
+        btn.disabled = false;
+        btn.innerHTML = '<i data-lucide="send" class="w-4 h-4"></i> Send Message';
+        lucide.createIcons();
+      });
     }
   });
 
