@@ -161,6 +161,9 @@ function initContactForm() {
     }
 
     if (valid) {
+      // Set reply-to so sender's email shows in your inbox
+      form.querySelector('input[name="_replyto"]').value = email.value.trim();
+
       const btn = form.querySelector('button[type="submit"]');
       btn.disabled = true;
       btn.innerHTML = '<span class="animate-pulse">Sending...</span>';
