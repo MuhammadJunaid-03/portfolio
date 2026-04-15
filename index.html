@@ -245,10 +245,121 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-heading reveal">Featured Projects</h2>
 
+      <!-- Category Filter -->
+      <div class="flex flex-wrap justify-center gap-3 mb-10 reveal">
+        <button onclick="filterProjects('all')" class="filter-btn active px-4 py-2 text-sm font-medium rounded-lg bg-primary text-white transition-all">All</button>
+        <button onclick="filterProjects('unity')" class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-dark-700 text-gray-300 hover:bg-primary hover:text-white transition-all">Unity Games</button>
+        <button onclick="filterProjects('web')" class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-dark-700 text-gray-300 hover:bg-primary hover:text-white transition-all">Web Projects</button>
+      </div>
+
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <!-- PROJECT 1: UnityVault -->
-        <div class="project-card reveal">
+        <!-- UNITY GAME 1: Stack Tower -->
+        <div class="project-card reveal" data-category="unity">
+          <div class="p-6 flex flex-col h-full">
+            <div class="flex items-center justify-between mb-4">
+              <i data-lucide="layers" class="w-10 h-10 text-primary"></i>
+              <div class="flex gap-3">
+                <a href="https://github.com/MuhammadJunaid-03/Stack-Tower" target="_blank" rel="noopener" class="text-gray-400 hover:text-primary transition-colors" aria-label="GitHub">
+                  <i data-lucide="github" class="w-5 h-5"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Stack Tower</h3>
+            <p class="text-gray-400 text-sm leading-relaxed flex-grow mb-4">
+              Hyper-casual tap-to-stack Android game with precise block slicing mechanics,
+              combo scoring system, and polished UI Toolkit interface. Built with Unity 6
+              and MCP-assisted development workflow.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Unity 6</span>
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">C#</span>
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Android</span>
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">MCP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- UNITY GAME 2: Bomber Ace -->
+        <div class="project-card reveal" data-category="unity" style="animation-delay: 0.1s">
+          <div class="p-6 flex flex-col h-full">
+            <div class="flex items-center justify-between mb-4">
+              <i data-lucide="plane" class="w-10 h-10 text-primary"></i>
+              <div class="flex gap-3">
+                <a href="https://github.com/MuhammadJunaid-03/Bomber-Ace" target="_blank" rel="noopener" class="text-gray-400 hover:text-primary transition-colors" aria-label="GitHub">
+                  <i data-lucide="github" class="w-5 h-5"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Bomber Ace</h3>
+            <p class="text-gray-400 text-sm leading-relaxed flex-grow mb-4">
+              WW2-themed arcade bomber game featuring enemy AI, procedural terrain generation,
+              weapon upgrades, and cinematic camera work. Built with Unity 6 URP and Cinemachine
+              for polished visual storytelling.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Unity 6</span>
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">C#</span>
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">URP</span>
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Cinemachine</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- UNITY GAME 3: Truck Simulator -->
+        <div class="project-card reveal" data-category="unity" style="animation-delay: 0.2s">
+          <div class="p-6 flex flex-col h-full">
+            <div class="flex items-center justify-between mb-4">
+              <i data-lucide="truck" class="w-10 h-10 text-primary"></i>
+              <div class="flex gap-3">
+                <a href="https://github.com/MuhammadJunaid-03" target="_blank" rel="noopener" class="text-gray-400 hover:text-primary transition-colors" aria-label="GitHub">
+                  <i data-lucide="github" class="w-5 h-5"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Truck Simulator</h3>
+            <p class="text-gray-400 text-sm leading-relaxed flex-grow mb-4">
+              Mobile truck simulation game with realistic physics engine, multiple truck models,
+              challenging terrain environments, and immersive driving mechanics.
+              Published on app stores.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Unity</span>
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">C#</span>
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Physics</span>
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Mobile</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- UNITY GAME 4: Line Puzzle -->
+        <div class="project-card reveal" data-category="unity">
+          <div class="p-6 flex flex-col h-full">
+            <div class="flex items-center justify-between mb-4">
+              <i data-lucide="puzzle" class="w-10 h-10 text-primary"></i>
+              <div class="flex gap-3">
+                <a href="https://github.com/MuhammadJunaid-03" target="_blank" rel="noopener" class="text-gray-400 hover:text-primary transition-colors" aria-label="GitHub">
+                  <i data-lucide="github" class="w-5 h-5"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Line Puzzle</h3>
+            <p class="text-gray-400 text-sm leading-relaxed flex-grow mb-4">
+              Addictive puzzle game where players connect lines to solve increasingly
+              complex challenges. Features smooth animations, hundreds of levels,
+              and a satisfying progression system.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Unity</span>
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">C#</span>
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Puzzle</span>
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Mobile</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- WEB PROJECT 1: UnityVault -->
+        <div class="project-card reveal" data-category="web" style="animation-delay: 0.1s">
           <div class="p-6 flex flex-col h-full">
             <div class="flex items-center justify-between mb-4">
               <i data-lucide="store" class="w-10 h-10 text-primary"></i>
@@ -263,9 +374,9 @@
             </div>
             <h3 class="text-xl font-bold text-white mb-2">UnityVault</h3>
             <p class="text-gray-400 text-sm leading-relaxed flex-grow mb-4">
-              A Unity asset marketplace where admins upload assets with external download links.
-              Features 3-tier subscription plans (Free, Pro, Enterprise), admin dashboard,
-              and a browsable asset catalog.
+              Unity asset marketplace with 3-tier subscription plans (Free, Pro, Enterprise),
+              admin dashboard for asset management, and a browsable catalog with external
+              download links.
             </p>
             <div class="flex flex-wrap gap-2 mt-auto">
               <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">HTML/CSS/JS</span>
@@ -275,54 +386,51 @@
           </div>
         </div>
 
-        <!-- PROJECT 2: Truck Simulator -->
-        <div class="project-card reveal" style="animation-delay: 0.1s">
+        <!-- WEB PROJECT 2: KSA Shoes Store -->
+        <div class="project-card reveal" data-category="web" style="animation-delay: 0.2s">
           <div class="p-6 flex flex-col h-full">
             <div class="flex items-center justify-between mb-4">
-              <i data-lucide="truck" class="w-10 h-10 text-primary"></i>
+              <i data-lucide="shopping-bag" class="w-10 h-10 text-primary"></i>
               <div class="flex gap-3">
-                <a href="https://github.com/MuhammadJunaid-03" target="_blank" rel="noopener" class="text-gray-400 hover:text-primary transition-colors" aria-label="GitHub">
+                <a href="https://github.com/MuhammadJunaid-03/ksa-shoes-store" target="_blank" rel="noopener" class="text-gray-400 hover:text-primary transition-colors" aria-label="GitHub">
                   <i data-lucide="github" class="w-5 h-5"></i>
                 </a>
               </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">Truck Simulator</h3>
+            <h3 class="text-xl font-bold text-white mb-2">Al-Zaytoun KSA Store</h3>
             <p class="text-gray-400 text-sm leading-relaxed flex-grow mb-4">
-              A mobile truck simulation game built with Unity. Features realistic physics,
-              multiple truck models, challenging terrain, and immersive driving mechanics
-              published on app stores.
+              Premium dark-luxury e-commerce store for Arabic footwear. 20 products, Arabic-first
+              RTL with English toggle, cart, checkout, WhatsApp integration, and KSA payment
+              methods (Mada, Tamara, Apple Pay).
             </p>
             <div class="flex flex-wrap gap-2 mt-auto">
-              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Unity</span>
-              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">C#</span>
-              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Mobile</span>
-              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Physics</span>
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Next.js 16</span>
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">React 19</span>
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">i18n RTL</span>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 3: Line Puzzle -->
-        <div class="project-card reveal" style="animation-delay: 0.2s">
+        <!-- WEB PROJECT 3: RobotJet Website -->
+        <div class="project-card reveal" data-category="web">
           <div class="p-6 flex flex-col h-full">
             <div class="flex items-center justify-between mb-4">
-              <i data-lucide="puzzle" class="w-10 h-10 text-primary"></i>
+              <i data-lucide="printer" class="w-10 h-10 text-primary"></i>
               <div class="flex gap-3">
-                <a href="https://github.com/MuhammadJunaid-03" target="_blank" rel="noopener" class="text-gray-400 hover:text-primary transition-colors" aria-label="GitHub">
+                <a href="https://github.com/MuhammadJunaid-03/robotjet-website" target="_blank" rel="noopener" class="text-gray-400 hover:text-primary transition-colors" aria-label="GitHub">
                   <i data-lucide="github" class="w-5 h-5"></i>
                 </a>
               </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">Line Puzzle</h3>
+            <h3 class="text-xl font-bold text-white mb-2">RobotJet Website</h3>
             <p class="text-gray-400 text-sm leading-relaxed flex-grow mb-4">
-              An addictive puzzle game where players connect lines to solve increasingly
-              complex challenges. Features smooth animations, hundreds of levels, and a
-              satisfying progression system.
+              Modern industrial digital printing website redesign with responsive layout,
+              product showcases, and clean professional UI for a printing services company.
             </p>
             <div class="flex flex-wrap gap-2 mt-auto">
-              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Unity</span>
-              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">C#</span>
-              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Mobile</span>
-              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">Puzzle</span>
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">HTML</span>
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">CSS</span>
+              <span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">JavaScript</span>
             </div>
           </div>
         </div>

@@ -199,6 +199,27 @@ function initContactForm() {
   }
 }
 
+/* --- Project Filter --- */
+function filterProjects(category) {
+  const cards = document.querySelectorAll('.project-card');
+  const buttons = document.querySelectorAll('.filter-btn');
+
+  buttons.forEach(btn => {
+    btn.classList.remove('bg-primary', 'text-white', 'active');
+    btn.classList.add('bg-dark-700', 'text-gray-300');
+  });
+  event.target.classList.remove('bg-dark-700', 'text-gray-300');
+  event.target.classList.add('bg-primary', 'text-white', 'active');
+
+  cards.forEach(card => {
+    if (category === 'all' || card.dataset.category === category) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
 /* --- Footer Year --- */
 function setFooterYear() {
   const el = document.getElementById('year');
