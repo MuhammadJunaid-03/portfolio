@@ -16,11 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
    EDIT: Change the words array to customize what gets typed */
 function initTypingEffect() {
   const words = [
-    'web applications.',
     'mobile games.',
-    'AR experiences.',
-    'multiplayer systems.',
     'Unity projects.',
+    'racing games.',
+    'simulation games.',
+    'hyper-casual games.',
+    'open-world games.',
+    'web applications.',
   ];
 
   const el = document.getElementById('typed-text');
